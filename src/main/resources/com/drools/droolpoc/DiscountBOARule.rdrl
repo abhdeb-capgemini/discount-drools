@@ -1,0 +1,11 @@
+package com.drools.droolpoc;
+
+import java.lang.Number;
+
+rule "DiscountBOARule"
+	dialect "mvel"
+	when
+		request : InitialInputs( cardBankName == "BOA" )
+	then
+		request.setDiscountedPrice( request.productPrice - ((request.productPrice * 10 ) / 100) );
+end
