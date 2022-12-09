@@ -7,5 +7,5 @@ rule "DiscountBOARule"
 	when
 		request : InitialInputs( cardBankName == "BOA" )
 	then
-		request.setDiscountedPrice( request.productPrice - ((request.productPrice * 10 ) / 100) );
+		request.setDiscountedPrice( request.productPrice - ((request.productPrice * 9 ) / 100) );
 end
